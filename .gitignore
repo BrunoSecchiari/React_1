@@ -1,0 +1,14 @@
+# Apple
+.DS_store
+
+# Modules
+node_modules
+
+# Text
+*.txt
+
+# API Keys
+.env
+
+# SASS
+.sass-cache
