@@ -1,6 +1,9 @@
-import Expenses from "./components/Expenses";
+import React from 'react';
 
-function App() {
+import Expenses from "./components/Expense/Expenses";
+import NewExpense from './components/NewExpense/NewExpense';
+
+const App = () => {
   const expenses = [
     {id: '01', title: 'Alcohol', amount: 17.54, date: new Date(2021, 5, 17)},
     {id: '02', title: 'Fried Chicken', amount: 4.99, date: new Date(2022, 5, 26)},
@@ -10,10 +13,18 @@ function App() {
 
   return (
     <div>
-      <h2>Expense Tracker</h2>
+      <NewExpense />
       <Expenses items={expenses} />
     </div>
   );
+
+  /* return React.createElement(
+    'div', 
+    {}, 
+    React.createElement(Headline, {}), 
+    React.createElement(Expenses, {items:expenses})
+  ); */
+
 }
 
 export default App;
